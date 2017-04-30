@@ -1,10 +1,15 @@
 var head= document.getElementsByTagName('head')[0];
+/*
 var script= document.createElement('script');
 
 script.type= 'text/javascript';
 script.src= 'https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.9.0/mark.js';
+*/
 
-head.appendChild(script);
+
+
+
+// head.appendChild(script);
 // chrome.windows.getCurrent(function(win)
 // {
 //     chrome.tabs.getAllInWindow(win.id, function(tabs)
@@ -14,6 +19,18 @@ head.appendChild(script);
 //     });
 // });
 
+  var context = document.querySelector("body");
+  console.log('context', context);
+  var instance = new Mark(context);
+  console.log('instance', instance);
+  var words = ['moon', 'blue'];
+
+  function handleSetQuery(findWords) {
+      instance.mark(findWords);
+  }
+
+  handleSetQuery(words);
+/*
 script.onload = () => {
   // document.addEventListener('DOMContentLoaded', function () {
   var context = document.querySelector("body");
@@ -42,4 +59,5 @@ script.onload = () => {
   //     }
   // });
 };
+*/
 

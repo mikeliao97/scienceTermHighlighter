@@ -12,7 +12,7 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["src/highlightWord.js"]
+      "js": ["mark.js", "src/highlightWord.js"]
     }
   ],
   "manifest_version": 2
