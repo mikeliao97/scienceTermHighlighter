@@ -18,14 +18,12 @@ $(document).ready(function() {
       console.log('data', data);
       sidebar = $(data);
 
-
       //Need to fix tyhis code
       $('body').append(sidebar);
+      sidebar.hide();
 
-      $('html').on('click', function() {
-        console.log('showing');
-        sidebar.show();
-      })
+
+      
 
 
       $('body').on('click', '#close', function(event) {
@@ -35,6 +33,12 @@ $(document).ready(function() {
       })
     }
   })
+
+  $('body').on('click', '#see-more-button', function() {
+    console.log('see more button');
+    sidebar.show();
+  })
+
 });
 
 

@@ -86,7 +86,7 @@ div.tab button.active {
   width: 20px;
   background-image: linear-gradient(-180deg, #fafbfc 0%, #eff3f6 90%);
   cursor: pointer;
- z-index: 1000003;
+  z-index: 1000003;
 }
 
 /* Upvote and Downvote */

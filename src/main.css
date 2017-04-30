@@ -1,0 +1,27 @@
+.selection-bubble {
+  height: 200px;
+  width: 200px;
+  visibility: hidden;
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  border: 1px solid #999;
+  background-color: #ffd;
+}
+
+.selection-bubble img {
+  height: 60px;
+  width: 60px;
+}
+
+.selection-bubble p {
+  font-size: 14px;
+}
+
+#see-more-button {
+  float: right;
+  font-size: 12px;
+  margin-top: 46px;
+}

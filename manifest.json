@@ -1,6 +1,6 @@
 {
-  "name": "A browser action with a popup that changes the page color",
-  "description": "Change the current page color",
+  "name": "Find scientific words",
+  "description": "its the best",
   "version": "1.0",
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
@@ -8,16 +8,11 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "css": ["styles.css"],
-      "js": ["jquery.js", "highlight.js"]
+      "css": ["styles.css", "src/main.css"],
+      "js": ["jquery.js", "highlight.js", 
+      "src/tooltip.js", "src/queryHighlightedWord.js"]
     }
   ],
-  "browser_action": {
-      "default_title": "Set this page's color.",
-      "default_icon": "icon.png",
-      "default_popup": "popup.html"
-  },
-
   "manifest_version": 2,
   "web_accessible_resources": [
     "*"
