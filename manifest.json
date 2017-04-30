@@ -3,11 +3,13 @@
   "description": "Define highlighted scientific term.",
   "version": "2.0",
   "permissions": [
-      "activeTab"
+    "activeTab"
   ],
-  "background": {
-      "scripts": ["src/queryHighlightedWord.js"],
-      "persistent": false
-  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["src/queryHighlightedWord.js"]
+    }
+  ],
   "manifest_version": 2
 }
