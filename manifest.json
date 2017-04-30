@@ -5,12 +5,16 @@
   "permissions": [
     "tabs", "http://*/*", "https://*/*"
   ],
+  // "background": {
+  //   "scripts": ["src/eventPage.js"],
+  //   "persistent": false
+  // },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
       "css": ["styles.css", "src/main.css"],
-      "js": ["jquery.js", "highlight.js", 
-      "src/tooltip.js", "src/queryHighlightedWord.js"]
+      "js": ["mark.js", "jquery.js", "highlight.js", 
+      "src/tooltip.js", "src/queryHighlightedWord.js","src/highlightWord.js"] 
     }
   ],
   "manifest_version": 2,
