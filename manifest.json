@@ -3,12 +3,17 @@
   "description": "Define highlighted scientific term.",
   "version": "2.0",
   "permissions": [
-    "activeTab"
+    "activeTab",
+    "tabs" 
   ],
+  // "background": {
+  //   "scripts": ["src/eventPage.js"],
+  //   "persistent": false
+  // },
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["src/queryHighlightedWord.js"]
+      "js": ["src/highlightWord.js"]
     }
   ],
   "manifest_version": 2
