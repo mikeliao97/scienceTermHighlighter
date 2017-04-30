@@ -22,13 +22,14 @@ $(document).ready(function() {
       //Need to fix tyhis code
       $('body').append(sidebar);
 
-      $('html').not('#sidebar').on('click', function() {
+      $('html').on('click', function() {
         console.log('showing');
         sidebar.show();
       })
 
 
-      $('body').on('click', '#close', function() {
+      $('body').on('click', '#close', function(event) {
+        event.stopPropagation();
         console.log('close TAB!!!!', sidebar);
         sidebar.hide();
       })
