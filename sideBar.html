@@ -1,0 +1,55 @@
+<div id='sidebar'>
+  <div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'Term')">Term</button>
+    <button class="tablinks" onclick="openTab(event, 'Paris')">Users</button>
+    <button class="tablinks" id="close"> Close Tab </button>
+  </div>
+
+
+  <div id="Term" class="tabcontent">
+    <div id="term"> 
+    <h1>TERM</h1> 
+    </div>
+      <img id="pic" src='http://nineplanets.org/images/thesun.jpg'>
+    <div id='def'>
+      <h3>The definition of the sun is this massive red ball whats gucci </h3>
+    </div>
+  </div>
+
+  <div id="Users" class="tabcontent">
+   This page will have all the users
+  </div>
+
+  <script>
+    function openTab(evt, cityName) {
+      // Declare all variables
+      var i, tabcontent, tablinks;
+
+      // Get all elements with class="tabcontent" and hide them
+      tabcontent = document.getElementsByClassName("tabcontent");
+      console.log('tabcontent');
+      for (i = 0; i < tabcontent.length; i++) {
+          console.log('tagb cotent', tabcontent[i]);
+          tabcontent[i].style.display = "none";
+      }
+
+      // Get all elements with class="tablinks" and remove the class "active"
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+
+      // Show the current tab, and add an "active" class to the button that opened the tab
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+   }
+   /*
+   function closeTab() {
+     console.log('trying to close tab');
+     var element = document.getElementById('sidebar');
+     console.log('element'); 
+     element.style.display = "none"
+   }
+   */
+  </script> 
+</div>
