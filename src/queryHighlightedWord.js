@@ -1,16 +1,9 @@
-const getHighlightedWord = () => {
-  let text = '';
-  if (window.getSelection) {
-    text = window.getSelection().toString();
-  } else if (document.selection && document.selection.type != "Control") {
-    text = document.selection.createRange().text;
-  }
-  return text;
+const queryHighlightedWord = (highlightedWord) => {
+  // TODO: query API endpoint with highlightedWord for data
+  // mock data
+  return {
+    term: highlightedWord,
+    definition: 'the natural satellite of the earth, visible (chiefly at night) by reflected light from the sun hahasdf',
+    imageSource: 'https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg'
+  };
 };
-
-const queryHighlightedWord = () => {
-  const highlightedWord = getHighlightedWord();
-  console.log('highlighted word:', highlightedWord);
-};
-
-document.addEventListener('dblclick', queryHighlightedWord);
