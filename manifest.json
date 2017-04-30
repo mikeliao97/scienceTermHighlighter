@@ -8,7 +8,8 @@
   "content_scripts": [
     {
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["src/createTooltip.js", "src/tooltip.js", "src/queryHighlightedWord.js"]
+      "css": ["src/main.css"],
+      "js": ["src/tooltip.js", "src/queryHighlightedWord.js"]
     }
   ],
   "manifest_version": 2
